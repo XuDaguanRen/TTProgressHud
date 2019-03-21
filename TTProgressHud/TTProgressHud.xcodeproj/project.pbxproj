@@ -12,6 +12,9 @@
 		20556F4522437D41007C0172 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20556F4322437D41007C0172 /* Main.storyboard */; };
 		20556F4722437D44007C0172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20556F4622437D44007C0172 /* Assets.xcassets */; };
 		20556F4A22437D44007C0172 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20556F4822437D44007C0172 /* LaunchScreen.storyboard */; };
+		20556F5322437F5D007C0172 /* TTProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20556F5222437F5D007C0172 /* TTProgressHud.swift */; };
+		20556F5522437FBC007C0172 /* TTLoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20556F5422437FBC007C0172 /* TTLoadingAnimation.swift */; };
+		20556F5722437FC9007C0172 /* TTProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20556F5622437FC9007C0172 /* TTProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		20556F4622437D44007C0172 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20556F4922437D44007C0172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20556F4B22437D44007C0172 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20556F5222437F5D007C0172 /* TTProgressHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTProgressHud.swift; sourceTree = "<group>"; };
+		20556F5422437FBC007C0172 /* TTLoadingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTLoadingAnimation.swift; sourceTree = "<group>"; };
+		20556F5622437FC9007C0172 /* TTProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +62,21 @@
 			children = (
 				20556F3F22437D41007C0172 /* AppDelegate.swift */,
 				20556F4122437D41007C0172 /* ViewController.swift */,
+				20556F5122437F48007C0172 /* TTProgressHud */,
 				20556F4322437D41007C0172 /* Main.storyboard */,
 				20556F4622437D44007C0172 /* Assets.xcassets */,
 				20556F4822437D44007C0172 /* LaunchScreen.storyboard */,
 				20556F4B22437D44007C0172 /* Info.plist */,
+			);
+			path = TTProgressHud;
+			sourceTree = "<group>";
+		};
+		20556F5122437F48007C0172 /* TTProgressHud */ = {
+			isa = PBXGroup;
+			children = (
+				20556F5222437F5D007C0172 /* TTProgressHud.swift */,
+				20556F5422437FBC007C0172 /* TTLoadingAnimation.swift */,
+				20556F5622437FC9007C0172 /* TTProgressView.swift */,
 			);
 			path = TTProgressHud;
 			sourceTree = "<group>";
@@ -136,7 +153,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				20556F4222437D41007C0172 /* ViewController.swift in Sources */,
+				20556F5522437FBC007C0172 /* TTLoadingAnimation.swift in Sources */,
 				20556F4022437D41007C0172 /* AppDelegate.swift in Sources */,
+				20556F5722437FC9007C0172 /* TTProgressView.swift in Sources */,
+				20556F5322437F5D007C0172 /* TTProgressHud.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
