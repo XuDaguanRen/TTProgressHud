@@ -15,6 +15,15 @@ class ViewController: UIViewController {
         setupUI()
     }
 
+    @objc func clickBtn1() -> Void {
+        let progressView = TTProgressView()
+        
+        progressView.setupProgresViewUI(frame: self.view.bounds, fontSize: 18, message: "提示你错了")
+        //        loadAnimation.replicatorLayerColor = UIColor.blue
+        
+        self.view.addSubview(progressView)
+    }
+    
     @objc func clickBtn() -> Void {
        
         let loadAnimation = TTLoadingAnimation()
@@ -25,13 +34,18 @@ class ViewController: UIViewController {
         self.view.addSubview(loadAnimation)
     }
     
-    
     func setupUI() -> Void {
         let btn = UIButton.init(frame: CGRect(x: 100, y: 100, width: 120, height: 60))
         btn.setTitle("动画", for: .normal)
         btn.backgroundColor = UIColor.red
         btn.addTarget(self, action: #selector(clickBtn), for: .touchUpInside)
         self.view.addSubview(btn)
+        
+        let btn1 = UIButton.init(frame: CGRect(x: 100, y: 170, width: 120, height: 60))
+        btn1.setTitle("若提示", for: .normal)
+        btn1.backgroundColor = UIColor.red
+        btn1.addTarget(self, action: #selector(clickBtn1), for: .touchUpInside)
+        self.view.addSubview(btn1)
     }
 }
 
