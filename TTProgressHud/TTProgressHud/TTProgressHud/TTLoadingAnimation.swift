@@ -12,11 +12,11 @@ import UIKit
 
 class TTLoadingAnimation: UIView {
     ///不同屏幕缩放比, 主要用于字体,布局等
-    let kLayoutScale = UIScreen.main.bounds.width / 375
+    fileprivate let kLayoutScale = UIScreen.main.bounds.width / 375
     // 是否正在显示
-    var isShowing: Bool?
+    fileprivate var isShowing: Bool?
     /// 复制层 父类是CALayer 动画的背景大小和颜色
-    var replicatorLayer = CAReplicatorLayer()
+    fileprivate  var replicatorLayer = CAReplicatorLayer()
     
     ///提示背景颜色默认  白烟  #F5F5F5     245,245,245 : 245, green: 245, blue: 245, alpha: 1
     @objc var replicatorLayerColor: UIColor = UIColor.init(red: 245, green: 245, blue: 245, alpha: 1) {
