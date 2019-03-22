@@ -59,7 +59,7 @@ class TTProgressHud: NSObject {
             //布局若提示
             self.promptView.setupProgresViewUI(frame: UIScreen.main.bounds, fontSize: 16, message: message)
             //提示View背景颜色
-            self.promptView.bottomViewColor = UIColor.init(red: 242, green: 242, blue: 242, alpha: 1)
+            self.promptView.bottomViewColor = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1.0)
             //把自己添加到视图windw中
             self.tpWindow.addSubview(self.promptView)
             //延时多久删除提示

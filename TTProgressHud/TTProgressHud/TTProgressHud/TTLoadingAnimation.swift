@@ -18,8 +18,8 @@ class TTLoadingAnimation: UIView {
     /// 复制层 父类是CALayer 动画的背景大小和颜色
     fileprivate  var replicatorLayer = CAReplicatorLayer()
     
-    ///提示背景颜色默认  白烟  #F5F5F5     245,245,245 : 245, green: 245, blue: 245, alpha: 1
-    @objc var replicatorLayerColor: UIColor = UIColor.init(red: 245, green: 245, blue: 245, alpha: 1) {
+    ///提示背景颜色默认  白烟  #F5F5F5
+    @objc var replicatorLayerColor: UIColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1.0) {
         didSet {
             // 提示背景颜色默认 烟白色  #F5F5F5
             self.replicatorLayer.backgroundColor = self.replicatorLayerColor.cgColor

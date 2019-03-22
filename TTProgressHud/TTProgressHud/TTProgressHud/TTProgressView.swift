@@ -19,8 +19,8 @@ class TTProgressView: UIView {
     /// 提示文案
     lazy var messageLable = UILabel()
     
-    /// 提示背景颜色默认 浅灰色 #D3D3D3 #FCFCFC
-    @objc var bottomViewColor: UIColor = UIColor.init(red: 211, green: 211, blue: 211, alpha: 1) {
+    /// 提示背景颜色默认 浅灰色 #D3D3D3 #FCFCFC 
+    @objc var bottomViewColor: UIColor = UIColor(red: 211/255, green: 211/255, blue: 211/255, alpha: 1.0) {
         didSet {
             // 提示背景颜色默认 烟白色  #F5F5F5
             self.bottomView.backgroundColor = self.bottomViewColor
