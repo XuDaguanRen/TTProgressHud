@@ -28,9 +28,36 @@ class TTProgressHud: NSObject {
     /// 提示动画完成回调
     var loadingMessageBlock: (()->Void)?
     
+    // MARK: 删除网络请求加载动画
+    /// 删除网络请求加载动画
+    @objc public func dismssLoadingAnimation() -> Void {
+        isShowing = false
+        DispatchQueue.main.async {
+            self.loagView.removeFromSuperview()
+            if let loadingAnimation = self.loadingAnimationBlock {
+                loadingAnimation()
+                self.loadingAnimationBlock = nil
+            }
+        }
+    }
     
+    // MARK: 网络请求加载动画
+    /// 网络请求加载动画
+    ///
+    /// - Parameter selfView: 展示动画的View
+    @objc public func loadingAnimation(selfView: UIView) -> Void {
+        
+        isShowing = true
+        DispatchQueue.main.async {
+            //加载动画
+            self.loagView.loadingAnimation(frame: UIScreen.main.bounds)
+            //把自己添加到视图windw中
+            self.tpWindow.addSubview(self.loagView)
+        }
+    }
+
     // MARK: 删除提示动画
-    /// 消失时间
+    /// 删除提示动画 消失时间
     ///
     /// - Parameter dismissTime: 消失时间
     @objc public func dismssAnimationMessage(dismissTime: Double) -> Void {
@@ -44,7 +71,7 @@ class TTProgressHud: NSObject {
     }
     
     // MARK: 弱提示
-    ///
+    /// 弱提示
     /// - Parameters:
     ///   - selfView: 展示的控制器
     ///   - message: 展示的提示
@@ -52,7 +79,8 @@ class TTProgressHud: NSObject {
     @objc public func loadingAnimationWithMessage(selfView: UIView, message: String, dismissTime: Double) -> Void {
         
         if isShowing {
-            
+            //先删除加载动画，在弱提示
+            dismssLoadingAnimation()
         }
         
         DispatchQueue.main.async {
