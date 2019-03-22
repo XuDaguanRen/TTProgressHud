@@ -28,6 +28,21 @@ class TTProgressHud: NSObject {
     /// 提示动画完成回调
     var loadingMessageBlock: (()->Void)?
     
+    
+    // MARK: 删除提示动画
+    /// 消失时间
+    ///
+    /// - Parameter dismissTime: 消失时间
+    @objc public func dismssAnimationMessage(dismissTime: Double) -> Void {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + dismissTime, execute: {
+            self.promptView.removeFromSuperview()
+            if let loadingBlock = self.loadingMessageBlock {
+                loadingBlock()
+                self.loadingMessageBlock = nil
+            }
+        })
+    }
+    
     // MARK: 弱提示
     ///
     /// - Parameters:
@@ -37,7 +52,7 @@ class TTProgressHud: NSObject {
     @objc public func loadingAnimationWithMessage(selfView: UIView, message: String, dismissTime: Double) -> Void {
         
         if isShowing {
-
+            
         }
         
         DispatchQueue.main.async {
@@ -47,8 +62,10 @@ class TTProgressHud: NSObject {
             self.promptView.bottomViewColor = UIColor.init(red: 242, green: 242, blue: 242, alpha: 1)
             //把自己添加到视图windw中
             self.tpWindow.addSubview(self.promptView)
-
+            //延时多久删除提示
+            self.dismssAnimationMessage(dismissTime: dismissTime)
         }
         
     }
+    
 }
