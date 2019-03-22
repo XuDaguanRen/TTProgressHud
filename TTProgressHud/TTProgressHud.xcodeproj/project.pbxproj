@@ -75,8 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				20556F5222437F5D007C0172 /* TTProgressHud.swift */,
-				20556F5422437FBC007C0172 /* TTLoadingAnimation.swift */,
 				20556F5622437FC9007C0172 /* TTProgressView.swift */,
+				20556F5422437FBC007C0172 /* TTLoadingAnimation.swift */,
 			);
 			path = TTProgressHud;
 			sourceTree = "<group>";
@@ -305,6 +305,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MGZUJKTG4V;
 				INFOPLIST_FILE = TTProgressHud/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +324,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MGZUJKTG4V;
 				INFOPLIST_FILE = TTProgressHud/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
