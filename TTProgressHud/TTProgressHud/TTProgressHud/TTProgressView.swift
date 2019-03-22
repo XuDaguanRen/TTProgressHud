@@ -28,7 +28,7 @@ class TTProgressView: UIView {
     }
     
     // MARK: - 若提示
-    ///
+    /// 若提示
     /// - Parameters:
     ///   - frame: 屏幕大小
     ///   - fontSize: 文字字号
