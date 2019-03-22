@@ -16,22 +16,26 @@ class ViewController: UIViewController {
     }
 
     @objc func clickBtn1() -> Void {
-        let progressView = TTProgressView()
+//        let progressView = TTProgressView()
+//
+//        progressView.setupProgresViewUI(frame: self.view.bounds, fontSize: 18, message: "提示你错了")
+//        //        loadAnimation.replicatorLayerColor = UIColor.blue
+//
+//        self.view.addSubview(progressView)
         
-        progressView.setupProgresViewUI(frame: self.view.bounds, fontSize: 18, message: "提示你错了")
-        //        loadAnimation.replicatorLayerColor = UIColor.blue
-        
-        self.view.addSubview(progressView)
+         TTProgressHud.shared.loadingAnimationWithMessage(selfView: self.view, message: "提示谁错了？？？", dismissTime: 1.5)
     }
     
     @objc func clickBtn() -> Void {
        
-        let loadAnimation = TTLoadingAnimation()
-        
-        loadAnimation.loadingAnimation(frame: self.view.bounds)
-//        loadAnimation.replicatorLayerColor = UIColor.blue
-        
-        self.view.addSubview(loadAnimation)
+//        let loadAnimation = TTLoadingAnimation()
+//
+//        loadAnimation.loadingAnimation(frame: self.view.bounds)
+////        loadAnimation.replicatorLayerColor = UIColor.blue
+//
+//        self.view.addSubview(loadAnimation)
+         TTProgressHud.shared.loadingAnimation(selfView: self.view)
+       
     }
     
     func setupUI() -> Void {
